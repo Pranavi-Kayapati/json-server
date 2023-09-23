@@ -14,5 +14,53 @@
       "place": "Banglore",
       "gender": "Female"
     }
+  ],
+  "products": [
+    {
+      "image": "www.image.com",
+      "name": "shirts",
+      "desc": "men shirt",
+      "gender": "male",
+      "category": "shirts",
+      "price": "9999",
+      "id": 3,
+      "(newData, id) ": "> dispatch => {\n  dispatch(productRequest);\n  return axios__WEBPACK_IMPORTED_MODULE_1__[\"default\"].patch(`http://localhost:3000/products/${id}`, newData).then(res => {\n    console.log(res);\n    dispatch({\n      type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__.PATCH_PRODUCT_SUCCESS\n    });\n  }).catch(err => {\n    dispatch(productFailure(err.message));\n  });\n}"
+    },
+    {
+      "image": "image.cm",
+      "name": "lehenga",
+      "desc": "women lehenga",
+      "gender": "female",
+      "category": "lehenga",
+      "price": "9999",
+      "id": 5
+    },
+    {
+      "image": "image.com",
+      "name": "jeans",
+      "desc": "men jeans",
+      "gender": "male",
+      "category": "jeans",
+      "price": "99999",
+      "id": 6
+    },
+    {
+      "image": "saree",
+      "name": "women saree",
+      "desc": "women saree",
+      "gender": "female",
+      "category": "saree",
+      "price": "69999",
+      "id": 7
+    },
+    {
+      "image": "image.com",
+      "name": "jaket",
+      "desc": "women jaket",
+      "gender": "female",
+      "category": "jackets",
+      "price": "8999",
+      "id": 8
+    }
   ]
 }
